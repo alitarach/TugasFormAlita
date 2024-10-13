@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(166, 19, 19);
+        }
+        .form-header {
+            background-color: #b7dce1;
+            padding: 20px;
+            text-align: left;
+            border-bottom: 2px solid #000;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .form-header img {
+            max-width: 70px;
+            position: absolute;
+            top: 10px;
+            right: 30px;
+        }
+        .custom-card {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="custom-card">
+            <div class="form-header">
+                <h2 class="fw-bold d-inline-block">Formulir Pendaftaran</h2>
+                <img src="telu.png" alt="Logo">
+                <p> </p>
+                <small>Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, 
+                  Kabupaten Bandung, Jawa Barat 40257 | Telp: (022) 7564108 | telkomuniversity.ac.id</small>
+            </div>
+            <form onsubmit="event.preventDefault(); alert('Pendaftaran Berhasil!');">
+                <div class="mb-3">
+                    <label for="namaLengkap" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan Nama Lengkap" required>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="tanggalLahir" class="form-label">Tanggal Lahir</label>
+                        <input type="date" class="form-control" id="tanggalLahir" required>
+                    </div>
+                    <div class="col">
+                      <label class="form-label">Jenis Kelamin</label><br>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="jenisKelamin" id="pria" value="L">
+                          <label class="form-check-label" for="pria">Laki-laki</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="jenisKelamin" id="wanita" value="P">
+                          <label class="form-check-label" for="wanita">Perempuan</label>
+                      </div>
+                  </div>
+              </div>
+                <div class="mb-3">
+                    <label for="asalSekolah" class="form-label">Asal Sekolah</label>
+                    <input type="text" class="form-control" id="asalSekolah" placeholder="Masukkan Asal Sekolah" required>
+                </div>
+                <div class="mb-3">
+                    <label for="kelas" class="form-label">Nilai Rata-rata Sekolah</label>
+                    <input type="text" class="form-control" id="kelas" placeholder="Masukkan Nilai" required>
+                </div>
+                <div class="mb-3">
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea class="form-control" id="alamat" rows="3" placeholder="Masukkan Alamat" required></textarea>
+                </div>
+                <div class="row mb-4">
+                  <div class="col">
+                      <label for="noTelepon" class="form-label">No. Telepon</label>
+                      <input type="text" class="form-control" id="noTelepon" placeholder="Masukkan No. Telepon">
+                  </div>
+                  <div class="col">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input type="email" class="form-control" id="email" placeholder="Masukkan E-mail">
+                  </div>
+              </div>
+            <div class>
+                <label for="namaOrangTua" class="form-label">Nama Orang Tua</label>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="namaAyah" class="form-label">Ayah</label>
+                    <input type="text" class="form-control" id="namaAyah" placeholder="Masukkan Nama Ayah" required>
+                </div>
+                <div class="col">
+                    <label for="namaIbu" class="form-label">Ibu</label>
+                    <input type="text" class="form-control" id="namaIbu" placeholder="Masukkan Nama Ibu" required>
+                </div>
+            </div>
+            <div class>
+                <label for="pekerjaanortu" class="form-label">Pekerjaan Orang Tua</label>
+            </div>
+                <div class="row mb-4">
+                    <div class="col">
+                  <label for="kerjaAyah" class="form-label">Ayah</label>
+                  <select class="form-select" aria-label="Default select example" id="kerjaAyah" name="kerjaAyah" required>
+                      <option value="" selected disabled>Select</option>
+                      <option value="TNI">TNI</option>
+                      <option value="POLRI">POLRI</option>
+                      <option value="PEGAWAI NEGERI"> Pegawai Negeri</option>
+                      <option value="BUMN"> BUMN</option>
+                      <option value="KARYAWAN SWASTA"> Karyawan Swasta</option>
+                      <option value="WIRAUSAHA"> Wirausaha</option>
+                  </select>
+                </div>
+                <div class="col">
+                    <label for="kerjaIbu" class="form-label">Ibu</label>
+                    <select class="form-select" aria-label="Default select example" id="kerjaIbu" name="kerjaIbu" required>
+                        <option value="" selected disabled>Select</option>
+                        <option value="TNI">TNI</option>
+                        <option value="POLRI">POLRI</option>
+                        <option value="PEGAWAI NEGERI"> Pegawai Negeri</option>
+                        <option value="BUMN"> BUMN</option>
+                        <option value="KARYAWAN SWASTA"> Karyawan Swasta</option>
+                        <option value="WIRAUSAHA"> Wirausaha</option>
+                        <option value="rumtang"> Ibu Rumah Tangga</option>
+                    </select>
+                  </div>
+                </div>
+                <div class>
+                    <label for="notlportu" class="form-label">No. Telepon Orang Tua</label>
+                </div>
+                <div class="row mb-4">
+                    <div class="col">
+                        <label for="noAyah" class="form-label">Ayah</label>
+                        <input type="number" class="form-control" id="noAyah" placeholder="Masukkan Nomor Telepon Ayah" required>
+                    </div>
+                    <div class="col">
+                        <label for="noIbu" class="form-label">Ibu</label>
+                        <input type="number" class="form-control" id="noIbu" placeholder="Masukkan Nomor Telepon Ibu" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                  <label for="jurusan" class="form-label">Jurusan</label>
+                  <select class="form-select" aria-label="Default select example" id="jurusan" name="jurusan" required>
+                      <option value="" selected disabled>Select</option>
+                      <option value="TT"> Teknik Telekomunikasi</option>
+                      <option value="si"> Sistem Informasi</option>
+                      <option value="TI"> Teknologi Informasi</option>
+                      <option value="DKV"> Desain Komunikasi Visual</option>
+                  </select>
+              </div>
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="text-center mt-1">
+            <p style="color: white; text-align: center;">Hak cipta &copy;2024 by Sephira Alita</p>      
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
